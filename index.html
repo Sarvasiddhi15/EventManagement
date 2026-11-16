@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gather – Event Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Gather</h1>
+    <p>Plan events. Invite guests. Track replies.</p>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: create event + event list -->
+    <section class="panel" aria-labelledby="events-title">
+      <h2 id="events-title">Your events</h2>
+      <form id="event-form" class="form">
+        <input id="ev-name" placeholder="Event name" required>
+        <div class="row">
+          <input id="ev-date" type="date" required>
+          <input id="ev-place" placeholder="Location" required>
+        </div>
+        <button type="submit" class="btn">Create event</button>
+      </form>
+      <div id="event-list" class="event-grid"></div>
+    </section>
+
+    <!-- RIGHT: guest management for selected event -->
+    <section class="panel" aria-labelledby="guests-title">
+      <h2 id="guests-title">Guest list</h2>
+      <div id="guest-area"></div>
+    </section>
+  </main>
+
+  <div id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
